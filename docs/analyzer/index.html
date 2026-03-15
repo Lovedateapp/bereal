@@ -28,56 +28,10 @@
     </style>
   </head>
   <body>
-    <h1>Analyzer Stub</h1>
+    <h1>Analyzer Ready</h1>
     <p class="badge">Waiting for Flutter</p>
-    <div id="log" class="log">Ready.</div>
+    <div id="log" class="log">Loaded analyzer scripts.</div>
 
-    <script>
-      const logEl = document.getElementById("log");
-
-      function log(message) {
-        logEl.textContent = message;
-      }
-
-      function buildStubResult() {
-        return {
-          summary: {
-            aiGeneratedScore: 0.42,
-            tamperScore: 0.33,
-            beautyFilterScore: 0.27,
-            confidence: 0.5,
-            notes: [
-              "Stub response from analyzer page.",
-              "Replace with image-reality-check pipeline."
-            ]
-          }
-        };
-      }
-
-      window.analyzeImage = async function (payload) {
-        try {
-          log("Received image. Running stub analysis...");
-          const result = buildStubResult(payload);
-          if (
-            window.AnalyzerChannel &&
-            typeof window.AnalyzerChannel.postMessage === "function"
-          ) {
-            window.AnalyzerChannel.postMessage(JSON.stringify(result));
-          } else {
-            log("AnalyzerChannel not found. Result: " + JSON.stringify(result));
-          }
-        } catch (err) {
-          const errorPayload = { error: String(err) };
-          if (
-            window.AnalyzerChannel &&
-            typeof window.AnalyzerChannel.postMessage === "function"
-          ) {
-            window.AnalyzerChannel.postMessage(JSON.stringify(errorPayload));
-          } else {
-            log("Error: " + String(err));
-          }
-        }
-      };
-    </script>
+    <script src="./rc-analyzer.js"></script>
   </body>
 </html>

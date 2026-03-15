@@ -14,3 +14,5 @@ Flutter MVP for an image authenticity checker (AI generation, beauty filter, ELA
    - `https://cyleunggg.github.io/bereal/analyzer/index.html`
 
 The Flutter app loads that analyzer URL and communicates via a JavaScript bridge.
+
+Analyzer assets are sourced from the `image-reality-check` project and live under `docs/analyzer/`.

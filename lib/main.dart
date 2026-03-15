@@ -35,7 +35,7 @@ class RealityCheckHome extends StatefulWidget {
 
 class _RealityCheckHomeState extends State<RealityCheckHome> {
   static const String analyzerUrl =
-      'https://cyleunggg.github.io/bereal/analyzer/index.html';
+      'https://lovedateapp.github.io/bereal/analyzer/index.html';
 
   final ImagePicker _picker = ImagePicker();
   late final WebViewController _controller;
